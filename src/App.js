@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { publicRoutes } from "@/routes";
-import Defaultlayout from "@/component/Layouts/DefaultLayout";
 import { Fragment } from "react";
+import Provider from "./store/Provider";
+import Defaultlayout from "@/component/Layouts/DefaultLayout";
 function App() {
   return (
     <Router>
@@ -19,9 +20,11 @@ function App() {
               <Route
                 path={route.path}
                 element={
-                  <Layout>
-                    <Page />
-                  </Layout>
+                  <Provider>
+                    <Layout>
+                      <Page />
+                    </Layout>
+                  </Provider>
                 }
                 key={idx}
               ></Route>

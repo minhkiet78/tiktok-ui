@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  cursor: pointer;
+  &:hover {
+    background: rgba(22, 24, 35, 0.03);
+  }
+  .icon {
+    width: 20px;
+    margin-right: 10px;
+  }
+  p {
+    font-size: 14px;
+  }
+}
